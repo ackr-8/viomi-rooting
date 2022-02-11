@@ -37,7 +37,7 @@ EOT
     connect_adb_and_install_dropbear
   fi
 
-  if [ -z "$NEW_V8" ]; then
+  if [ -z "$NEW_V10" ]; then
     if ssh vacuum "test -f /etc/rc.d/S90robotManager"
     then
       echo "Robot service already restored, skipping"
@@ -58,7 +58,7 @@ EOT
 }
 
 function connect_adb_and_install_dropbear() {
-  if [ -z "$NEW_V8" ]; then
+  if [ -z "$NEW_V10" ]; then
     echo "We'll now try to connect to the ADB shell. Please connect the USB cable to your computer."
     echo "If you hear the Robot voice ('kaichi'), wait another two seconds and unplug and reconnect the cable."
     echo "If nothing happens try replugging the USB cable. This may take 10 or more attempts."
@@ -81,7 +81,7 @@ EOT
   fix_adb_shell
   echo "Shell fixed..."
   
-  if [ -z "$NEW_V8" ]; then
+  if [ -z "$NEW_V10" ]; then
     persist_adb_shell
 
     echo "Please replug the USB cable again. Do not unplug once you hear the sound."
@@ -112,7 +112,7 @@ EOT
 }
 
 function adb_loop() {
-   if [ -z "$NEW_V8" ]; then
+   if [ -z "$NEW_V10" ]; then
     while true; do
       adb $@ | grep -v "no devices/emulators found" && break
     done
