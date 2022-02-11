@@ -6,7 +6,7 @@ This tool aims to automate the rooting process described in
 It is known to work with the following models:
 
 * Mijia STYJ02YM (viomi-v7)
-* Mijia STYTJ02YM (viomi-v8) (experimental)
+* Mi Vacuum Mop P STYTJ02YM (viomi-v10) (experimental)
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ Note: For newer viomi-v8 models, above will not work, but you can try the
 following experimental procedure based on
 [findings by @Dropaq](https://github.com/rumpeltux/python-miio/issues/1#issuecomment-915647117):
 
-    NEW_V8=1 ./viomi-root.sh
+    NEW_V10=1 ./viomi-root.sh
 
 ## What’s the script doing?
 
